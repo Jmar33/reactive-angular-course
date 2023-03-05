@@ -35,6 +35,7 @@ import { SearchLessonsComponent } from "./search-lessons/search-lessons.componen
 import { LoadingComponent } from "./loading/loading.component";
 import { CoursesCardListComponent } from "./courses-card-list/courses-card-list.component";
 import { LoadingService } from "./loading/loading.service";
+import { MessagesService } from "./messages/messages.service";
 
 @NgModule({
   declarations: [
@@ -75,8 +76,8 @@ import { LoadingService } from "./loading/loading.service";
     MatMomentDateModule,
     ReactiveFormsModule,
   ],
-  providers: [LoadingService],
   bootstrap: [AppComponent],
   entryComponents: [CourseDialogComponent],
+  providers: [LoadingService, MessagesService],
 })
 export class AppModule {}
